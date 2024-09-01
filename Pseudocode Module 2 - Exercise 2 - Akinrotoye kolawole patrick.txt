@@ -1,0 +1,29 @@
+﻿START
+
+    // Declare constants
+    SET OVERDRAWN_FEE_PERCENT = 0.01
+    SET FIXED_FEE_PER_OVERDRAW = 5
+
+    // Declare variables
+    SET accountBalance = 0
+    SET numberOfOverdraws = 0
+    SET overDrawnFee = 0
+    SET totalFee = 0
+
+    // Input
+    PRINT "Enter the account balance:"
+    INPUT accountBalance
+
+    PRINT "Enter the number of times the account was overdrawn:"
+    INPUT numberOfOverdraws
+
+    // Process
+    CALCULATE overDrawnFee = (accountBalance * OVERDRAWN_FEE_PERCENT) + (numberOfOverdraws * FIXED_FEE_PER_OVERDRAW)
+    CALCULATE newAccountBalance = accountBalance - overDrawnFee
+
+    // Output
+    PRINT "Calculated Fee: ", overDrawnFee
+    PRINT "New Account Balance: ", newAccountBalance
+    PRINT "Thanks for using this program"
+
+END
