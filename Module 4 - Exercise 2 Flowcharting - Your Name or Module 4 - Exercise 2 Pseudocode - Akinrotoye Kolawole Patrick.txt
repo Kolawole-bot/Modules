@@ -1,0 +1,17 @@
+START
+    Set WordToFind = "logic"  // Example word
+    OPEN Dictionary
+    Set CurrentPage = Middle of Dictionary
+
+    WHILE WordOnCurrentPage != WordToFind
+        IF WordToFind < WordOnCurrentPage THEN
+            Move to previous pages
+        ELSE
+            Move to next pages
+        END IF
+
+        OPEN NewPage
+    END WHILE
+
+    OUTPUT "Word found."
+END

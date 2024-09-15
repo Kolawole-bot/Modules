@@ -1,0 +1,19 @@
+Pseudocode for Guessing a Number Between 1 and 100
+START
+    Set TargetNumber = 37  // Example number
+    Guess = 0
+
+    WHILE Guess != TargetNumber
+        OUTPUT "Enter your guess:"
+        INPUT Guess
+
+        IF Guess < TargetNumber THEN
+            OUTPUT "Too low. Try again."
+        ELSE IF Guess > TargetNumber THEN
+            OUTPUT "Too high. Try again."
+        ELSE
+            OUTPUT "Correct! You guessed the number."
+        END IF
+    END WHILE
+
+END
